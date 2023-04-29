@@ -17,7 +17,7 @@ const CategoriesCard = ({ imgUrl, title }) => {
         style={{
           height: 90,
           width: 95,
-          backgroundColor: "red",
+          backgroundColor: "grey",
           borderRadius: 4,
         }}
         resizeMode="contain"

@@ -12,7 +12,8 @@ import { useNavigation } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/FontAwesome";
 import Searchicon from "react-native-vector-icons/Feather";
 import Sort from "react-native-vector-icons/MaterialIcons";
-import Categories from "../components/Categories";
+import Categories from "../components/Categories/Categories";
+import FeaturedRow from "../components/Featured Row/FeaturedRow";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -35,7 +36,7 @@ const HomeScreen = () => {
           />
           <View style={styles.textContainer}>
             <Text style={{ color: "grey" }}>Deliver Now !</Text>
-            <Text style={{ fontWeight: "800", fontSize: 14 }}>
+            <Text style={{ fontWeight: "800", fontSize: 16 }}>
               Current Location{" "}
               <Icon name="chevron-down" size={14} color="#00ccbb" />
             </Text>
@@ -45,7 +46,6 @@ const HomeScreen = () => {
           <Icon name="user" size={25} color="#00ccbb" />
         </View>
       </View>
-
       {/* search bar container */}
       <View style={styles.searchBar}>
         <View
@@ -77,11 +77,36 @@ const HomeScreen = () => {
           style={{ height: 30, width: 45, paddingLeft: 15 }}
         />
       </View>
-      {/* scroll view container */}
-      <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
-        <Categories/>
+      <ScrollView vertical>
+        {/* scroll view container */}
+        <ScrollView contentContainerStyle={{ paddingBottom: 10 }}>
+          <Categories />
+        </ScrollView>
+        <FeaturedRow
+          id="1"
+          title="featured"
+          description="Paid groceries"
+          featuredCategory="Groceries"
+        />
+        <FeaturedRow
+          id="1"
+          title="featured"
+          description="Paid groceries"
+          featuredCategory="Groceries"
+        />
+        <FeaturedRow
+          id="1"
+          title="featured"
+          description="Paid groceries"
+          featuredCategory="Groceries"
+        />
+        <FeaturedRow
+          id="1"
+          title="featured"
+          description="Paid groceries"
+          featuredCategory="Groceries"
+        />
       </ScrollView>
-      
     </SafeAreaView>
   );
 };
