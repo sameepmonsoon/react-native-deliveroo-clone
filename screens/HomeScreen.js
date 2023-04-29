@@ -81,6 +81,7 @@ const HomeScreen = () => {
       <ScrollView contentContainerStyle={{ paddingBottom: 100 }}>
         <Categories/>
       </ScrollView>
+      
     </SafeAreaView>
   );
 };

@@ -8,6 +8,7 @@ const CategoriesCard = ({ imgUrl, title }) => {
         justifyContent: "center",
         flexDirection: "column",
         alignItems: "center",
+        position: "relative",
       }}>
       <Image
         source={{
