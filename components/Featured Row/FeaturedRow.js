@@ -45,7 +45,7 @@ const FeaturedRow = ({ title, featuredCategory, description }) => {
           rating={4.5}
           address={"Kathmandu"}
           genre={"Mexican"}
-          short_description="lorem afdkslfd"
+          short_description="lorem afdkslfd lllllll"
           dishes={[]}
           long={21}
           lat={1}
@@ -53,7 +53,7 @@ const FeaturedRow = ({ title, featuredCategory, description }) => {
         />
         <RestaurantCard
           id={12}
-          title={"taco"}
+          title={"Sushi"}
           rating={4.5}
           address={"Kathmandu"}
           genre={"Mexican"}
@@ -65,7 +65,7 @@ const FeaturedRow = ({ title, featuredCategory, description }) => {
         />
         <RestaurantCard
           id={12}
-          title={"taco"}
+          title={"KFC"}
           rating={4.5}
           address={"Kathmandu"}
           genre={"Mexican"}

@@ -85,23 +85,23 @@ const HomeScreen = () => {
         <FeaturedRow
           id="1"
           title="featured"
-          description="Paid groceries"
-          featuredCategory="Groceries"
+          description="Top Sellling"
+          featuredCategory="Foods"
         />
         <FeaturedRow
-          id="1"
+          id="2"
           title="featured"
           description="Paid groceries"
           featuredCategory="Groceries"
         />
         <FeaturedRow
-          id="1"
+          id="3"
           title="featured"
           description="Paid groceries"
           featuredCategory="Groceries"
         />
         <FeaturedRow
-          id="1"
+          id="4"
           title="featured"
           description="Paid groceries"
           featuredCategory="Groceries"

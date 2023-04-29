@@ -2,6 +2,7 @@ import { View, Text, TouchableOpacity, Image } from "react-native";
 import React from "react";
 import Icon from "react-native-vector-icons/Octicons";
 import Location from "react-native-vector-icons/Entypo";
+import { useNavigation } from "@react-navigation/native";
 
 const RestaurantCard = ({
   id,
@@ -16,8 +17,24 @@ const RestaurantCard = ({
   imgUrl,
   lat,
 }) => {
+  const navigate = useNavigation();
   return (
     <TouchableOpacity
+      onPress={() => {
+        navigate.navigate("Restaurant", {
+          id,
+          title,
+          description,
+          rating,
+          genre,
+          address,
+          short_description,
+          dishes,
+          long,
+          imgUrl,
+          lat,
+        });
+      }}
       style={{
         flexDirection: "column",
         borderRadius: 4,
