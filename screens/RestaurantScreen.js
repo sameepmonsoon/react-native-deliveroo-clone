@@ -7,6 +7,7 @@ import MaterialArrow from "react-native-vector-icons/MaterialIcons";
 
 import Icon from "react-native-vector-icons/Octicons";
 import Location from "react-native-vector-icons/Entypo";
+import DishRows from "../components/DishRows/DishRows";
 const RestaurantScreen = () => {
   const {
     params: {
@@ -120,6 +121,31 @@ const RestaurantScreen = () => {
           />
         </TouchableOpacity>
       </View>
+      <View
+        style={{
+          backgroundColor: "transparent",
+          height: 50,
+          flexDirection: "row",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          width: "100%",
+        }}>
+        <Text
+          style={{
+            fontSize: 16,
+            fontWeight: 700,
+            paddingLeft: 10,
+          }}>
+          Menu
+        </Text>
+      </View>
+      <ScrollView contentContainerStyle={{ paddingBottom: 10, gap: 10 }}>
+        <DishRows />
+        <DishRows />
+        <DishRows />
+        <DishRows />
+        <DishRows />
+      </ScrollView>
     </ScrollView>
   );
 };
