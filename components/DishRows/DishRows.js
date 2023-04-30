@@ -2,14 +2,17 @@ import { View, Text, Image, TouchableOpacity, Alert } from "react-native";
 import React, { useState } from "react";
 import MinusPlus from "react-native-vector-icons/AntDesign";
 import { useDispatch, useSelector } from "react-redux";
-import { addToBasket, selecBasketItemsWithId } from "../../Store/cartSlice";
+import {
+  addToBasket,
+  removeFromBasket,
+  selecBasketItemsWithId,
+} from "../../Store/cartSlice";
 
 const DishRows = ({ id, title, description, genre, price, imgUrl }) => {
   const [isPressed, setIsPressed] = useState(false);
   const dispatch = useDispatch();
   const items = useSelector((state) => selecBasketItemsWithId(state, id));
   const handleAdd = () => {
-    alert("CLicked");
     dispatch(
       addToBasket({
         id,
@@ -18,6 +21,13 @@ const DishRows = ({ id, title, description, genre, price, imgUrl }) => {
         genre,
         price,
         imgUrl,
+      })
+    );
+  };
+  const handleRemove = () => {
+    dispatch(
+      removeFromBasket({
+        id,
       })
     );
   };
@@ -72,7 +82,12 @@ const DishRows = ({ id, title, description, genre, price, imgUrl }) => {
             alignItems: "center",
             padding: 10,
           }}>
-          <MinusPlus name="minuscircle" size={30} color="#00ccdd" />
+          <MinusPlus
+            name="minuscircle"
+            size={30}
+            color={`${items.length == 0 ? "grey" : "#00ccdd"}`}
+            onPress={handleRemove}
+          />
           <Text
             style={{
               flexDirection: "row",
@@ -86,7 +101,7 @@ const DishRows = ({ id, title, description, genre, price, imgUrl }) => {
             name="pluscircle"
             size={30}
             color="#00ccdd"
-            onPress={() => handleAdd()}
+            onPress={handleAdd}
           />
         </View>
       )}
