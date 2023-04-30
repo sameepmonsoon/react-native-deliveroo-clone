@@ -140,11 +140,56 @@ const RestaurantScreen = () => {
         </Text>
       </View>
       <ScrollView contentContainerStyle={{ paddingBottom: 10, gap: 10 }}>
-        <DishRows />
-        <DishRows />
-        <DishRows />
-        <DishRows />
-        <DishRows />
+        <DishRows
+          id={1}
+          title={"sushi"}
+          description={
+            "lorem food is great.lorem food is great.lorem food is great.lorem food is great.lorem food is great."
+          }
+          genre={"Japanese"}
+          price={1500}
+          imgUrl={"https://links.papareact.com/wru"}
+        />
+        <DishRows
+          id={2}
+          title={"Kebab"}
+          description={
+            "lorem food is great.lorem food is great.lorem food is great.lorem food is great.lorem food is great."
+          }
+          genre={"Turkish"}
+          price={1500}
+          imgUrl={"https://links.papareact.com/gn7"}
+        />
+        <DishRows
+          id={3}
+          title={"Butter Naan"}
+          description={
+            "lorem food is great.lorem food is great.lorem food is great.lorem food is great.lorem food is great."
+          }
+          genre={"Indian"}
+          price={1500}
+          imgUrl={"https://links.papareact.com/wru"}
+        />
+        <DishRows
+          id={4}
+          title={"Kimchi"}
+          description={
+            "lorem food is great.lorem food is great.lorem food is great.lorem food is great.lorem food is great."
+          }
+          genre={"Korean"}
+          price={1500}
+          imgUrl={"https://links.papareact.com/gn7"}
+        />
+        <DishRows
+          id={5}
+          title={"Chowmein"}
+          description={
+            "lorem food is great.lorem food is great.lorem food is great.lorem food is great.lorem food is great."
+          }
+          genre={"Nepali"}
+          price={1500}
+          imgUrl={"https://links.papareact.com/wru"}
+        />
       </ScrollView>
     </ScrollView>
   );

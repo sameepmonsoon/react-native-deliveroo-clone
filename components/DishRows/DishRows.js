@@ -1,14 +1,32 @@
-import { View, Text, Image, TouchableOpacity } from "react-native";
+import { View, Text, Image, TouchableOpacity, Alert } from "react-native";
 import React, { useState } from "react";
 import MinusPlus from "react-native-vector-icons/AntDesign";
+import { useDispatch, useSelector } from "react-redux";
+import { addToBasket, selecBasketItemsWithId } from "../../Store/cartSlice";
 
-const DishRows = () => {
+const DishRows = ({ id, title, description, genre, price, imgUrl }) => {
   const [isPressed, setIsPressed] = useState(false);
+  const dispatch = useDispatch();
+  const items = useSelector((state) => selecBasketItemsWithId(state, id));
+  const handleAdd = () => {
+    alert("CLicked");
+    dispatch(
+      addToBasket({
+        id,
+        title,
+        description,
+        genre,
+        price,
+        imgUrl,
+      })
+    );
+  };
   return (
     <>
       <TouchableOpacity
         style={{ flexDirection: "column", gap: 10 }}
-        onPress={() => setIsPressed(!isPressed)}>
+        onPress={() => setIsPressed(!isPressed)}
+        id={id}>
         <View
           style={{
             flexDirection: "row",
@@ -28,15 +46,19 @@ const DishRows = () => {
               flex: 1,
               paddingHorizontal: 10,
             }}>
-            <Text style={{ fontSize: 18, fontWeight: 700 }}>Restaurant </Text>
-            <Text style={{ color: "grey" }}>
-              lorem ajfkdsfjds hasjfj afkdsjfkj afdksfd hfdjshjhfhdjsahdas
-              fasfdsjfhh{" "}
+            <Text
+              style={{
+                fontSize: 18,
+                fontWeight: 700,
+                textTransform: "capitalize",
+              }}>
+              {title}
             </Text>
-            <Text style={{ color: "grey", fontSize: 15 }}>Rs.1500 </Text>
+            <Text style={{ color: "grey" }}>{description}</Text>
+            <Text style={{ color: "grey", fontSize: 15 }}>Rs.{price}</Text>
           </View>
           <Image
-            source={{ uri: "https://links.papareact.com/wru" }}
+            source={{ uri: imgUrl }}
             style={{ height: 70, width: 70, alignSelf: "flex-start" }}
           />
         </View>
@@ -58,9 +80,14 @@ const DishRows = () => {
               alignItems: "center",
               paddingHorizontal: 10,
             }}>
-            {12}
+            {items?.length}
           </Text>
-          <MinusPlus name="pluscircle" size={30} color="#00ccdd" />
+          <MinusPlus
+            name="pluscircle"
+            size={30}
+            color="#00ccdd"
+            onPress={() => handleAdd()}
+          />
         </View>
       )}
     </>
