@@ -4,6 +4,7 @@ import {
   SafeAreaView,
   TouchableOpacity,
   Image,
+  ScrollView,
 } from "react-native";
 import React, { useMemo, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
@@ -74,7 +75,6 @@ const BasketScreen = () => {
           />
         </TouchableOpacity>
       </View>
-
       <View
         style={{
           flexDirection: "row",
@@ -96,14 +96,13 @@ const BasketScreen = () => {
           }}>
           <Image
             source={{ uri: "https://links.papareact.com/wru" }}
-            h
             style={{
               height: 40,
               width: 40,
               borderRadius: 100,
             }}
           />
-          <Text style={{ fontWeight: 600, color: "grey" }}>Nando's</Text>
+          <Text style={{ fontWeight: 600 }}>Deliver in 50-75 min</Text>
           <Text
             style={{
               fontWeight: 600,
@@ -116,62 +115,806 @@ const BasketScreen = () => {
         </View>
       </View>
 
-      <View
-        style={{
-          flexDirection: "row",
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "white",
-          width: "100%",
-        }}>
+      <ScrollView style={{ width: "100%", paddingBottom: 50 }}>
         <View
           style={{
             flexDirection: "row",
-            justifyContent: "flex-start",
+            justifyContent: "center",
             alignItems: "center",
-            height: 70,
-            flex: 1,
-            gap: 10,
-            paddingHorizontal: 10,
+            backgroundColor: "white",
             width: "100%",
           }}>
-          <Text style={{ fontWeight: 600, fontSize: 16,width:30 }}></Text>
-
-          <Image
-            source={{ uri: "https://links.papareact.com/wru" }}
-            h
-            style={{
-              height: 50,
-              width: 50,
-              borderRadius: 100,
-            }}
-          />
-          <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
           <View
             style={{
-              position: "absolute",
-              right: 20,
               flexDirection: "row",
               justifyContent: "flex-start",
               alignItems: "center",
+              height: 70,
+              flex: 1,
               gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
             }}>
             <Text
               style={{
                 fontWeight: 600,
-                color: "grey",
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
               }}>
-              Rs.300
+              5 x
             </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
             <Text
               style={{
                 fontWeight: 600,
+                fontSize: 16,
+                width: 30,
                 color: "#00ccbb",
               }}>
-              Remove
+              3 x
             </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
           </View>
         </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text
+              style={{
+                fontWeight: 600,
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
+              }}>
+              2 x
+            </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text
+              style={{
+                fontWeight: 600,
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
+              }}>
+              1 x
+            </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text
+              style={{
+                fontWeight: 600,
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
+              }}>
+              2 x
+            </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text
+              style={{
+                fontWeight: 600,
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
+              }}>
+              2 x
+            </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text
+              style={{
+                fontWeight: 600,
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
+              }}>
+              2 x
+            </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text
+              style={{
+                fontWeight: 600,
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
+              }}>
+              2 x
+            </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text
+              style={{
+                fontWeight: 600,
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
+              }}>
+              2 x
+            </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "white",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              height: 70,
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text
+              style={{
+                fontWeight: 600,
+                fontSize: 16,
+                width: 30,
+                color: "#00ccbb",
+              }}>
+              2 x
+            </Text>
+
+            <Image
+              source={{ uri: "https://links.papareact.com/wru" }}
+              style={{
+                height: 50,
+                width: 50,
+                borderRadius: 100,
+              }}
+            />
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Nando's</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "#00ccbb",
+                }}>
+                Remove
+              </Text>
+            </View>
+          </View>
+        </View>
+      </ScrollView>
+
+      <View
+        style={{
+          flexDirection: "column",
+          justifyContent: "flex-start",
+          alignItems: "center",
+          position: "absolute",
+          paddingVertical: 15,
+          gap: 10,
+          bottom: 26,
+          width: "100%",
+          backgroundColor: "white",
+          height: 200,
+        }}>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text style={{ fontWeight: 600, fontSize: 16, color: "grey" }}>
+              Subtotal
+            </Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text style={{ fontWeight: 600, fontSize: 16, color: "grey" }}>
+              Delivery Fee
+            </Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                  color: "grey",
+                }}>
+                Rs.300
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+          }}>
+          <View
+            style={{
+              flexDirection: "row",
+              justifyContent: "flex-start",
+              alignItems: "center",
+              flex: 1,
+              gap: 10,
+              paddingHorizontal: 10,
+              width: "100%",
+            }}>
+            <Text style={{ fontWeight: 600, fontSize: 16 }}>Order Total</Text>
+            <View
+              style={{
+                position: "absolute",
+                right: 20,
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                alignItems: "center",
+                gap: 10,
+              }}>
+              <Text
+                style={{
+                  fontWeight: 600,
+                }}>
+                Rs.300
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        <TouchableOpacity
+          style={{
+            zIndex: 1,
+            width: "95%",
+            borderRadius: 10,
+            flexDirection: "row",
+            justifyContent: "center",
+            paddingHorizontal: 12,
+            alignItems: "center",
+            height: 61,
+            backgroundColor: "#00ccbb",
+            color: "white",
+          }}
+          onPress={() => navigation.navigate("Order")}>
+          <Text style={{ color: "white", fontSize: 16, fontWeight: 700 }}>
+            Place Order
+          </Text>
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
